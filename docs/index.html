@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Forum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Forum</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showCategory('feedback')">Feedback</a></li>
+                <li><a href="#" onclick="showCategory('general')">General Discussion</a></li>
+                <li><a href="#" onclick="showCategory('offtopic')">Off-Topic</a></li>
+                <li><a href="#" onclick="showCategory('admin')">Administration Talk</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="post-form">
+            <input type="text" id="postTitle" placeholder="Enter thread title">
+            <textarea id="postContent" placeholder="Write your post..."></textarea>
+            <button onclick="addPost()">Post</button>
+        </div>
+
+        <h2 id="categoryTitle">General Discussion</h2>
+        <div id="forumPosts"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
